@@ -9,8 +9,7 @@ programa
 	inteiro notas_10 = 0
 	inteiro notas_20 = 0
 	inteiro notas_50 = 0
-     inteiro valorAr
-     inteiro valorTr
+
 
 
 	inteiro caixa_eletronico // armazena o código da imagem do caixa eletrônico
@@ -31,12 +30,9 @@ programa
 	funcao processa_saque(inteiro valor_saque)
 	{
 		
-		notas_50 = valor_saque/50 // siga esta ideia para programar as duas linhas abaixo
-		notas_20 = valor_saque/20
-		notas_10 = valor_saque/10
-
-		valorAr = valor_saque
-		valorTr = valor_saque
+		notas_50 = valor_saque / 50 // siga esta ideia para programar as duas linhas abaixo
+		notas_20 = (valor_saque%50)/20
+		notas_10 = ((valor_saque%50)%20)/10
 	}
 
 
@@ -53,29 +49,18 @@ programa
 				Graficos.desenhar_imagem(n * 10 + 15, 440 + n * 10, cinquenta_reais)
 			}
 		}
-	     se(valorAr%50 >=20){
-	     valorAr = valorAr%50
-		notas_20 = valorAr/20
 
 		se (notas_20 > 0) {
 			para (inteiro n = 0; n < notas_20; n++) {
 				Graficos.desenhar_imagem(n * 10 + 200, 440 +130 + n * 10, vinte_reais)
 			}
 		}
-	     }
-	     se(valorAr%20 >=10){
-	     valorAr = valorAr%20
-	     notas_10 = valorAr/10
-          se( valorTr > 150 ou valorTr < 50  ){
-          
+
 		se (notas_10 > 0) {
 			para (inteiro n = 0; n < notas_10; n++) {
 				Graficos.desenhar_imagem(n * 10 + 380, 440 + n * 10, dez_reais)
 			}
-		}
-	     }
-	     }
-	     		
+		}		
 	}
 
 	funcao inicio()
@@ -185,7 +170,6 @@ programa
 
 		Graficos.renderizar()
 	}
-	
 
 }
 /* $$$ Portugol Studio $$$ 
