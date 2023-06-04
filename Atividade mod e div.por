@@ -17,7 +17,7 @@ programa
 		escreva("\nd)Eu pretendo comer ", (-5*12)*80," chocolates em toda minha vida.")
 		u.aguarde(3000)
 		Bambos =  ((((977000000.0/365.0)/24.0)/60.0)/60.0)
-		escreva("\ne)Se minha idade é de 977 milhôes de segundos, eu teria ", mat.arredondar(Bambos, 2),".")
+		escreva("\ne)Se minha idade é de 977 milhôes de segundos, eu teria ", mat.arredondar(Bambos, 2),"anos.")
 		u.aguarde(3000)
 
 		atividade2()
@@ -115,12 +115,32 @@ programa
 		escreva("\nb)Me informe dois valores(lado1 e lado2).")
 		leia(L1,L2)
           escreva("A quantidade mínima de fio a ser comprada de acordo com as suas medidas é de aproximadamente ", mat.arredondar(mat.raiz(mat.potencia(L1, 2)+mat.potencia(L2, 2), 2), 2) ," metros.")
-
-
-
-
+          u.aguarde(5000)
+          atividade6()
+	}
+	funcao atividade6(){
+		limpa()
+		escreva("Essa pessoa em um ano teria lido por ", mat.arredondar((0.05*24)*(365-52.143),2) ," horas.")
+		u.aguarde(5000)
+		atividade7()
+	}
+	funcao atividade7(){
+		inteiro id,idade,soma =0
+		limpa()
+		escreva("Quantos anos você tem?")
+		leia(id)
+		idade = id
+		
+		para(inteiro cont = 0;cont <=id; cont++){
+		 soma = soma + idade	
+		 idade = idade-1
+		}
+		escreva("A soma de todas as idades que você já teve seria: ", soma ,".")
+		u.aguarde(5000)
+		limpa()
 		
 	}
+	
 }
 /* $$$ Portugol Studio $$$ 
  * 
