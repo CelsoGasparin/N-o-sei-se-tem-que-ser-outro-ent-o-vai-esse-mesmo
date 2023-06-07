@@ -142,7 +142,7 @@ programa
 	}
 	funcao atividade8(){
 		inteiro MB,Mbps
-		escreva("Me informe o tamanho do arquivo e a sua velocidade de internet(o arquivo é em MB e a velocidade é Mbps.")
+		escreva("Me informe o tamanho do arquivo e a sua velocidade de internet(o arquivo é em MB e a velocidade é Mbps).")
 		leia(MB,Mbps)
 		MB = MB*8
 		escreva("\nO temp que você levaria para baixar esse arquivo seria de ", mat.arredondar((MB/Mbps)/60.0,2) ," minutos ou ", (MB/Mbps) ," segundos.")
@@ -150,7 +150,17 @@ programa
 		atividade9()
 	}
 	funcao atividade9(){
-		
+		real area
+		limpa()
+		escreva("Qual o tamanho da área(em metros quadrados) que você precisa pintar?")
+		leia(area)
+
+		se(area/54 > mat.arredondar(area/54,0) ou area/54 < mat.arredondar(area/54,0)){
+			escreva("A quantidade de tinta em litros que você terá que usar é de ", mat.arredondar(area/54,2) ," e você terá que gastar R$", (mat.arredondar(area/54,0)+1)*480 ," em latas de tinta de 18 litros.")
+		}
+		senao{
+			escreva("A quantidade de tinta em litros que você terá que usar é de ", mat.arredondar(area/54,2) ," e você terá que gastar R$", mat.arredondar(area/54,0)*480 ," em latas de tinta de 18 litros.")
+		}
 	}
 	
 }
