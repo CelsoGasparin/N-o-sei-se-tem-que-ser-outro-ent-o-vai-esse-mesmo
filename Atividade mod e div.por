@@ -17,7 +17,7 @@ programa
 		escreva("\nd)Eu pretendo comer ", (-5*12)*80," chocolates em toda minha vida.")
 		u.aguarde(3000)
 		Bambos =  ((((977000000.0/365.0)/24.0)/60.0)/60.0)
-		escreva("\ne)Se minha idade é de 977 milhôes de segundos, eu teria ", mat.arredondar(Bambos, 2),"anos.")
+		escreva("\ne)Se minha idade é de 977 milhôes de segundos, eu teria ", mat.arredondar(Bambos, 2)," anos.")
 		u.aguarde(3000)
 
 		atividade2()
@@ -138,6 +138,18 @@ programa
 		escreva("A soma de todas as idades que você já teve seria: ", soma ,".")
 		u.aguarde(5000)
 		limpa()
+		atividade8()
+	}
+	funcao atividade8(){
+		inteiro MB,Mbps
+		escreva("Me informe o tamanho do arquivo e a sua velocidade de internet(o arquivo é em MB e a velocidade é Mbps.")
+		leia(MB,Mbps)
+		MB = MB*8
+		escreva("\nO temp que você levaria para baixar esse arquivo seria de ", mat.arredondar((MB/Mbps)/60.0,2) ," minutos ou ", (MB/Mbps) ," segundos.")
+		u.aguarde(4000)
+		atividade9()
+	}
+	funcao atividade9(){
 		
 	}
 	
